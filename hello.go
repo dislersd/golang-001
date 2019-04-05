@@ -85,8 +85,6 @@ func main() { // func - go syntax - just like javascript - function name (params
 	} else {
 		fmt.Println(result2)
 	}
-	p := person{name: "Jake", age: 23}
-	fmt.Println(p)
 }
 
 func sum(x int, y int) int { // define new func here and invoke it within main func
