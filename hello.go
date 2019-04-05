@@ -23,4 +23,25 @@ func main() { // func - go syntax - just like javascript - function name (params
 	a = append(a, 13)
 	fmt.Println(a) // => {5, 4, 3, 2, 1, 13}
 
+	vertices := make(map[string]int)
+	// maps hold key value pairs like dictionaries in python
+	// type def is 'map'['key types']'type of values' - use the built in 'make' function to create map
+	/*
+		'map'['keys']'values'
+
+			map      string     int
+		vertices["triangle"] = 2
+	*/
+	vertices["triangle"] = 2
+	vertices["square"] = 3
+	vertices["dodecagon"] = 12
+
+	//delete(vertices, "square")
+
+	fmt.Println(vertices["triangle"]) // => 2
+
+	for i := 0; i < 5; i++ {
+		fmt.Println(i)
+	}
+
 }
