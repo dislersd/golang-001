@@ -1,7 +1,9 @@
 package main // if you want to execute any go file must have package main
 
 import ( // import different packages here
+	"errors"
 	"fmt" // i/o package
+	"math"
 )
 
 func main() { // func - go syntax - just like javascript - function name (params) {body}
@@ -74,4 +76,24 @@ func main() { // func - go syntax - just like javascript - function name (params
 				key: b value: beta
 	*/
 
+	result := sum(2, 10) // invoking sum func defined below
+	fmt.Println(result)
+
+	result2, err := sqrt(13)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(result2)
+	}
+}
+
+func sum(x int, y int) int { // define new func here and invoke it within main func
+	return x + y
+}
+
+func sqrt(x float64) (float64, error) { // finding square root of a number x - returns a defined error if given negative num
+	if x < 0 {
+		return 0, errors.New("Undefined for negative numbers")
+	}
+	return math.Sqrt(x), nil
 }
