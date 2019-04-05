@@ -40,8 +40,38 @@ func main() { // func - go syntax - just like javascript - function name (params
 
 	fmt.Println(vertices["triangle"]) // => 2
 
-	for i := 0; i < 5; i++ {
+	for i := 0; i < 5; i++ { // standard for loop
 		fmt.Println(i)
 	}
+
+	i := 0
+
+	for i < 5 { // refactor for loop to become while loop
+		fmt.Println(i)
+		i++
+	}
+
+	arr := []string{"a", "b", "c"}
+
+	for index, value := range arr { // using for on an array
+		fmt.Println("index:", index, "value:", value)
+		/*
+			=>	index: 0 value: a
+					index: 1 value: b
+					index: 2 value: c
+		*/
+	}
+
+	m := make(map[string]string)
+	m["a"] = "alpha"
+	m["b"] = "beta"
+
+	for key, value := range m { // using for on a map
+		fmt.Println("key:", key, "value:", value)
+	}
+	/*
+		=>	key: a value: alpha
+				key: b value: beta
+	*/
 
 }
